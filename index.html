@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños, Miriam 🎂</title>
+<meta name="description" content="Una sorpresa de cumpleaños para Miriam">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Fondo ambiental de burbujas y corazones -->
+<div class="bg-ambient" aria-hidden="true">
+  <span class="bubble b1"></span>
+  <span class="bubble b2"></span>
+  <span class="bubble b3"></span>
+  <span class="bubble b4"></span>
+  <span class="bubble b5"></span>
+</div>
+
+<!-- HERO: sobre cerrado -->
+<section id="hero" class="hero">
+  <div class="envelope-stage" id="envelopeStage">
+    <p class="envelope-label">Para</p>
+    <h1 class="envelope-name">Miriam</h1>
+    <button class="seal-btn" id="openBtn" aria-label="Abrir la sorpresa">
+      <span class="seal">
+        <svg viewBox="0 0 100 100" width="46" height="46" aria-hidden="true">
+          <circle cx="50" cy="50" r="46" fill="#F17FA6"/>
+          <text x="50" y="62" text-anchor="middle" font-size="46" fill="#fff" font-family="Baloo 2, sans-serif">M</text>
+        </svg>
+      </span>
+      <span class="seal-text">Abrir mi regalo</span>
+    </button>
+  </div>
+
+  <div class="hero-reveal" id="heroReveal">
+    <p class="eyebrow">Hoy es un día especial</p>
+    <h2 class="hero-title">¡Feliz Cumpleaños,<br><span class="highlight">Miriam</span>!</h2>
+    <div class="age-badge">
+      <span class="age-number">23</span>
+      <span class="age-label">años de pura magia</span>
+    </div>
+    <button class="scroll-cue" id="scrollCue" aria-label="Bajar para descubrir más">
+      Descubre tu sorpresa
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- CARTA -->
+<section id="carta" class="section carta-section">
+  <div class="section-inner">
+    <p class="eyebrow center">Antes de nada, quiero decirte algo</p>
+    <div class="letter-card">
+      <div class="letter-icon" aria-hidden="true">💌</div>
+      <div class="letter-text" id="letterText">
+        <p data-line>Miriam, quiero que sepas que te quiero muchísimo.</p>
+        <p data-line>Eres la mejor persona que conozco, sin ninguna duda la mejor del mundo.</p>
+        <p data-line>Tengo muchísima suerte de haberte encontrado en mi camino.</p>
+        <p data-line>Y te prometo que voy a hacer todo lo que esté en mi mano para convertirte en la mujer más feliz del mundo.</p>
+        <p data-line class="signoff">Feliz cumpleaños, mi amor. 🩵</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 23 RAZONES -->
+<section id="razones" class="section razones-section">
+  <div class="section-inner">
+    <p class="eyebrow center">23 razones (de muchísimas más)</p>
+    <h2 class="section-title center">Por qué te quiero tanto</h2>
+    <p class="section-sub center">Toca cada tarjeta y descúbrelas todas</p>
+    <div class="cards-grid" id="cardsGrid"></div>
+  </div>
+</section>
+
+<!-- TARTA / VELA -->
+<section id="tarta" class="section tarta-section">
+  <div class="section-inner">
+    <p class="eyebrow center">Es hora de pedir un deseo</p>
+    <h2 class="section-title center">Sopla tu vela</h2>
+    <div class="cake-wrap">
+      <svg id="cakeSvg" viewBox="0 0 220 220" width="220" height="220" aria-hidden="true">
+        <ellipse cx="110" cy="185" rx="85" ry="16" fill="#F6A8C0" opacity="0.35"/>
+        <rect x="35" y="140" width="150" height="45" rx="10" fill="#FDEFF4"/>
+        <rect x="35" y="140" width="150" height="14" rx="7" fill="#F6A8C0"/>
+        <rect x="45" y="105" width="130" height="42" rx="10" fill="#FFFFFF" stroke="#EADFF0" stroke-width="2"/>
+        <rect x="45" y="105" width="130" height="14" rx="7" fill="#8ED1E8"/>
+        <rect x="105" y="75" width="10" height="35" rx="4" fill="#F7D9A0"/>
+        <g id="flame" class="flame">
+          <path d="M110 55 C104 65 104 74 110 78 C116 74 116 65 110 55 Z" fill="#F6A8C0"/>
+          <path d="M110 62 C107 68 107 73 110 76 C113 73 113 68 110 62 Z" fill="#FFE29A"/>
+        </g>
+        <circle cx="70" cy="120" r="4" fill="#F17FA6"/>
+        <circle cx="150" cy="120" r="4" fill="#8ED1E8"/>
+        <circle cx="110" cy="160" r="4" fill="#F17FA6"/>
+        <circle cx="70" cy="160" r="4" fill="#8ED1E8"/>
+        <circle cx="150" cy="160" r="4" fill="#F17FA6"/>
+      </svg>
+      <p class="smoke" id="smokeText" aria-hidden="true">・˚𝜗𝜚 ˚</p>
+    </div>
+    <button class="btn-primary" id="blowBtn">Sopla la vela 🕯️</button>
+    <p class="wish-msg" id="wishMsg" role="status"></p>
+  </div>
+</section>
+
+<!-- MINIJUEGO -->
+<section id="juego" class="section juego-section">
+  <div class="section-inner">
+    <p class="eyebrow center">Un ratito de diversión</p>
+    <h2 class="section-title center">Atrapa los corazones</h2>
+    <p class="section-sub center">Tienes 15 segundos, ¡a por todos!</p>
+    <div class="game-hud">
+      <span>Puntos: <strong id="scoreVal">0</strong></span>
+      <span>Tiempo: <strong id="timeVal">15</strong>s</span>
+    </div>
+    <div class="game-area" id="gameArea">
+      <button class="game-start" id="startGameBtn">Empezar</button>
+    </div>
+    <p class="game-result" id="gameResult" role="status"></p>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section id="final" class="section final-section">
+  <div class="section-inner">
+    <div class="final-card">
+      <p class="eyebrow center">Para terminar</p>
+      <p class="final-text">
+        Gracias por existir, Miriam. Te quiero con toda mi alma, eres la mejor
+        del mundo y tengo muchísima suerte de haberte encontrado. Voy a dedicar
+        cada día a intentar hacerte la mujer más feliz del mundo.
+      </p>
+      <p class="final-text final-big">Feliz cumpleaños, mi vida. 🩵🤍🩷</p>
+      <p class="final-sign">— Con todo mi amor</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Hecho con 🩵🤍🩷 para ti, Miriam</p>
+</footer>
+
+<!-- Botón secreto (easter egg) -->
+<button class="paw-secret" id="pawSecret" aria-label="???">
+  <svg viewBox="0 0 64 64" width="26" height="26" aria-hidden="true">
+    <ellipse cx="32" cy="40" rx="16" ry="13" fill="currentColor"/>
+    <ellipse cx="14" cy="22" rx="7" ry="9" fill="currentColor"/>
+    <ellipse cx="32" cy="14" rx="7.5" ry="9.5" fill="currentColor"/>
+    <ellipse cx="50" cy="22" rx="7" ry="9" fill="currentColor"/>
+    <ellipse cx="22" cy="10" rx="0" ry="0" fill="none"/>
+  </svg>
+</button>
+
+<!-- Modal easter egg: panda rojo -->
+<div class="panda-modal" id="pandaModal" role="dialog" aria-modal="true" aria-label="Sorpresa secreta">
+  <div class="panda-modal-backdrop" id="pandaBackdrop"></div>
+  <div class="panda-card">
+    <button class="panda-close" id="pandaClose" aria-label="Cerrar">✕</button>
+    <svg viewBox="0 0 220 220" width="200" height="200" aria-hidden="true">
+      <ellipse cx="110" cy="205" rx="70" ry="10" fill="#2E5F73" opacity="0.08"/>
+      <ellipse cx="80" cy="72" rx="20" ry="24" fill="#C0562B"/>
+      <ellipse cx="140" cy="72" rx="20" ry="24" fill="#C0562B"/>
+      <ellipse cx="80" cy="76" rx="10" ry="12" fill="#3A2A22"/>
+      <ellipse cx="140" cy="76" rx="10" ry="12" fill="#3A2A22"/>
+      <ellipse cx="110" cy="115" rx="62" ry="55" fill="#D9713F"/>
+      <path d="M50 120 C50 90 75 70 110 70 C145 70 170 90 170 120 L170 130 C170 155 145 168 110 168 C75 168 50 155 50 130 Z" fill="#D9713F"/>
+      <ellipse cx="80" cy="118" rx="17" ry="20" fill="#3A2A22"/>
+      <ellipse cx="140" cy="118" rx="17" ry="20" fill="#3A2A22"/>
+      <ellipse cx="80" cy="116" rx="7" ry="9" fill="#FFFFFF"/>
+      <ellipse cx="140" cy="116" rx="7" ry="9" fill="#FFFFFF"/>
+      <circle cx="80" cy="118" r="3.2" fill="#211712"/>
+      <circle cx="140" cy="118" r="3.2" fill="#211712"/>
+      <path d="M78 150 C95 168 125 168 142 150 C142 168 125 178 110 178 C95 178 78 168 78 150 Z" fill="#FBEFE6"/>
+      <ellipse cx="110" cy="148" rx="10" ry="7" fill="#3A2A22"/>
+      <path d="M100 156 Q110 164 120 156" stroke="#3A2A22" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </svg>
+    <div class="panda-bubble">¡Felicidades, mamá! 🐼🎉</div>
+    <p class="panda-caption">Has encontrado el secreto 🔎🩷</p>
+  </div>
+</div>
+
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+<script src="js/script.js"></script>
+</body>
+</html>
